@@ -1,14 +1,15 @@
 class Question
   attr_accessor :num1, :num2, :answer
-  def initialize(num1, num2)
+  def initialize(num1, num2, playerName)
     @num1 = num1
     @num2 = num2
     @answer = nil
     @result = false
+    @playerName = playerName
   end
 
   def ask
-    puts "What does " + @num1.to_s + " plus " + @num2.to_s + " equal?"
+    puts "Player " + @playerName.to_s + ": What does " + @num1.to_s + " plus " + @num2.to_s + " equal?"
   end
 
   def answer
