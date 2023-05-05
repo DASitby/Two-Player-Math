@@ -3,7 +3,7 @@ require './turn'
 
 player1 = Player.new("1")
 player2 = Player.new("2")
-activePlayer = player1 
+activePlayer = player2 
 winner = nil
 while winner == nil
   if activePlayer.name == player1.name
@@ -11,7 +11,7 @@ while winner == nil
   elsif activePlayer.name == player2.name
     activePlayer = player1
   end
-  Turn.new(activePlayer, player1, player2)
+  Turn.new(activePlayer)
   puts "P1: " + player1.lives.to_s + "/3 vs P2: " + player2.lives.to_s + "/3"
   if player1.lives == 0
     winner = player2
