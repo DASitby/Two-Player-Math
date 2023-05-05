@@ -1,14 +1,9 @@
 require './question'
 
 class Turn
-  def initialize (activePlayer, p1, p2)
-    if activePlayer.name == p1.name
-      activePlayer = p2
-    elsif activePlayer.name == p2.name
-      activePlayer = p1
-    end
+  def initialize (activePlayer)
     puts "----- NEW TURN -----"
-    question = Question.new(rand(10), rand(10))
+    question = Question.new(rand(10), rand(10), activePlayer.name)
     question.ask
     question.answer
     if question.correct
