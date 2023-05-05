@@ -12,10 +12,10 @@ class Turn
     question.ask
     question.answer
     if question.correct
-      puts "yes queen, you now have " + activePlayer.lives.to_s + " lives left"
+      puts "YES! You are correct."
     else
       activePlayer.wrong
-      puts "what the fuck, you now have " + activePlayer.lives.to_s + " lives left"
+      puts "Seriously? No!"
     end
   end
 end
